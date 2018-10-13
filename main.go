@@ -13,7 +13,7 @@ func hello(writer http.ResponseWriter, request *http.Request) {
 func main() {
 	http.HandleFunc("/", hello)
 	log.Println("String server ... v1")
-	err := http.ListenAndServe(":9090", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err == nil{
 		log.Fatal("Listion and serve: ",err)
 	}
